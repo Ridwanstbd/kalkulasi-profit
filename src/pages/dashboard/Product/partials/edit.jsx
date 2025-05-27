@@ -34,7 +34,7 @@ const EditProductModal = ({
       setLoading(true);
       try {
         const response = await axios.get(
-          `${apiBaseUrl}/v1/products/${product_id}`,
+          `${apiBaseUrl}/api/products/${product_id}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -108,7 +108,7 @@ const EditProductModal = ({
 
     try {
       const response = await axios.put(
-        `${apiBaseUrl}/v1/products/${product_id}`,
+        `${apiBaseUrl}/api/products/${product_id}`,
         formData,
         {
           headers: {

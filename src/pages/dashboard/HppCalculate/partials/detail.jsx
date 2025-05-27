@@ -33,7 +33,7 @@ const DetailHPPModal = ({ isOpen, onClose, product_cost_id }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `${apiBaseUrl}/v1/hpp/${product_cost_id}`,
+          `${apiBaseUrl}/api/hpp/${product_cost_id}`,
           {
             headers: {
               "Content-Type": "application/json",

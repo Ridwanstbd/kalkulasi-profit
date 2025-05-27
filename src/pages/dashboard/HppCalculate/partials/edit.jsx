@@ -31,7 +31,7 @@ const EditHPPModal = ({ isOpen, onClose, product_cost_id }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `${apiBaseUrl}/v1/hpp/${product_cost_id}`,
+          `${apiBaseUrl}/api/hpp/${product_cost_id}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const EditHPPModal = ({ isOpen, onClose, product_cost_id }) => {
     setSubmitting(true);
     try {
       const response = await axios.put(
-        `${apiBaseUrl}/v1/hpp/${product_cost_id}`,
+        `${apiBaseUrl}/api/hpp/${product_cost_id}`,
         formData,
         {
           headers: {

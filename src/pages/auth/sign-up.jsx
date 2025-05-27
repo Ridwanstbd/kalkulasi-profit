@@ -55,7 +55,7 @@ const SignUp = () => {
     setLoading(true);
     setErrors({});
     try {
-      const response = await fetch(`${apiBaseUrl}/v1/register`, {
+      const response = await fetch(`${apiBaseUrl}/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

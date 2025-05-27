@@ -25,7 +25,7 @@ const CreateProductModal = ({ isOpen, onClose }) => {
         throw new Error("Anda belum login, silakan login terlebih dahulu");
       }
       const dataToSubmit = { ...formData, user_id: user.id };
-      await axios.post(`${apiBaseUrl}/v1/products`, dataToSubmit, {
+      await axios.post(`${apiBaseUrl}/api/products`, dataToSubmit, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

@@ -15,7 +15,7 @@ const DeleteHPPModal = ({ isOpen, onClose, product_cost_id, onDeleted }) => {
     try {
       setIsLoading(true);
 
-      await axios.delete(`${apiBaseUrl}/v1/hpp/${product_cost_id}`, {
+      await axios.delete(`${apiBaseUrl}/api/hpp/${product_cost_id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

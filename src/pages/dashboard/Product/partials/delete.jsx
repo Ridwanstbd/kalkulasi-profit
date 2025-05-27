@@ -21,7 +21,7 @@ const DeleteProductModal = ({
     try {
       setIsLoading(true);
 
-      await axios.delete(`${apiBaseUrl}/v1/products/${product_id}`, {
+      await axios.delete(`${apiBaseUrl}/api/products/${product_id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

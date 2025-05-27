@@ -72,7 +72,7 @@ const Pricing = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `${apiBaseUrl}/v1/price-schemes?product_id=${newSelectedProduct.value}`,
+          `${apiBaseUrl}/api/price-schemes?product_id=${newSelectedProduct.value}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -89,7 +89,7 @@ const Pricing = () => {
         setData(processedData);
 
         const productResponse = await axios.get(
-          `${apiBaseUrl}/v1/products/${newSelectedProduct.value}`,
+          `${apiBaseUrl}/api/products/${newSelectedProduct.value}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -129,7 +129,7 @@ const Pricing = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${apiBaseUrl}/v1/price-schemes`, {
+        const response = await axios.get(`${apiBaseUrl}/api/price-schemes`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

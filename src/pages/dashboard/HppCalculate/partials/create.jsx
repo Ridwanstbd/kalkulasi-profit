@@ -74,7 +74,7 @@ const CreateHPPModal = ({ isOpen, onClose, product_id, product_name }) => {
 
       const dataToSubmit = preparePayload();
 
-      await axios.post(`${apiBaseUrl}/v1/hpp`, dataToSubmit, {
+      await axios.post(`${apiBaseUrl}/api/hpp`, dataToSubmit, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -105,7 +105,7 @@ const CreateHPPModal = ({ isOpen, onClose, product_id, product_name }) => {
       try {
         setCostComponentLoading(true);
 
-        const response = await axios.get(`${apiBaseUrl}/v1/cost-components`, {
+        const response = await axios.get(`${apiBaseUrl}/api/cost-components`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = response.data.data;

@@ -16,7 +16,7 @@ const DetailPricingModal = ({ isOpen, onClose, price_id }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `${apiBaseUrl}/v1/price-schemes/${price_id}`,
+          `${apiBaseUrl}/api/price-schemes/${price_id}`,
           {
             headers: {
               "Content-Type": "application/json",

@@ -48,7 +48,7 @@ const Product = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${apiBaseUrl}/v1/products`, {
+        const response = await axios.get(`${apiBaseUrl}/api/products`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -71,7 +71,7 @@ const HppCalculate = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `${apiBaseUrl}/v1/hpp?product_id=${newSelectedProduct.value}`,
+          `${apiBaseUrl}/api/hpp?product_id=${newSelectedProduct.value}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -89,7 +89,7 @@ const HppCalculate = () => {
         setData(processedData);
 
         const productResponse = await axios.get(
-          `${apiBaseUrl}/v1/products/${newSelectedProduct.value}`,
+          `${apiBaseUrl}/api/products/${newSelectedProduct.value}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -129,7 +129,7 @@ const HppCalculate = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${apiBaseUrl}/v1/hpp`, {
+        const response = await axios.get(`${apiBaseUrl}/api/hpp`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -49,7 +49,7 @@ const CreatePricingModal = ({ isOpen, onClose, product_id, product_name }) => {
 
       const dataToSubmit = { ...formData, product_id };
 
-      await axios.post(`${apiBaseUrl}/v1/price-schemes`, dataToSubmit, {
+      await axios.post(`${apiBaseUrl}/api/price-schemes`, dataToSubmit, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
